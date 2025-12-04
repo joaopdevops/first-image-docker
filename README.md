@@ -1,92 +1,94 @@
-# 🐳 Meu Primeiro Docker
+# 🐳 My First Docker 🇺🇸
 
-Projeto simples para aprender Docker criando uma aplicação web com Nginx.
+**Read in English** | [Leia em Português](README.pt-BR.md)
 
-## 📋 O que é esse projeto?
+Simple project to learn Docker by creating a web application with Nginx.
 
-Uma página HTML servida pelo servidor web Nginx rodando dentro de um container Docker.
+## 📋 What is this project?
 
-## 🛠️ Tecnologias
+An HTML page served by Nginx web server running inside a Docker container.
 
-- **Docker** - Containerização
-- **Nginx** - Servidor web
+## 🛠️ Technologies
+
+- **Docker** - Containerization
+- **Nginx** - Web server
 - **HTML/CSS** - Interface
 
-## 🚀 Como usar
+## 🚀 How to use
 
-### 1. Construir a imagem Docker
+### 1. Build the Docker image
 
 ```bash
 docker build -t my-first-docker .
 ```
 
-**Explicação:**
-- `docker build` - comando para construir uma imagem
-- `-t my-first-docker` - dá o nome "my-first-docker" para a imagem
-- `.` - usa o Dockerfile do diretório atual
+**Explanation:**
+- `docker build` - command to build an image
+- `-t my-first-docker` - gives the name "my-first-docker" to the image
+- `.` - uses the Dockerfile in the current directory
 
-### 2. Rodar o container
+### 2. Run the container
 
 ```bash
 docker run -d -p 8080:80 --name my-container my-first-docker
 ```
 
-**Explicação:**
-- `docker run` - cria e inicia um container
-- `-d` - roda em background (detached)
-- `-p 8080:80` - mapeia porta 8080 do host para porta 80 do container
-- `--name my-container` - dá um nome ao container
-- `my-first-docker` - usa a imagem que criamos
+**Explanation:**
+- `docker run` - creates and starts a container
+- `-d` - runs in background (detached mode)
+- `-p 8080:80` - maps port 8080 on host to port 80 in container
+- `--name my-container` - gives a name to the container
+- `my-first-docker` - uses the image we created
 
-### 3. Acessar a aplicação
+### 3. Access the application
 
-Abra o navegador em: **http://localhost:8080**
+Open your browser at: **http://localhost:8080**
 
-## 📚 Comandos úteis Docker
+## 📚 Useful Docker commands
 
-### Ver containers rodando
+### View running containers
 ```bash
 docker ps
 ```
 
-### Ver todas as imagens
+### View all images
 ```bash
 docker images
 ```
 
-### Ver logs do container
+### View container logs
 ```bash
 docker logs my-container
 ```
 
-### Parar o container
+### Stop the container
 ```bash
 docker stop my-container
 ```
 
-### Iniciar o container novamente
+### Start the container again
 ```bash
 docker start my-container
 ```
 
-### Remover o container
+### Remove the container
 ```bash
 docker rm my-container
 ```
 
-### Remover a imagem
+### Remove the image
 ```bash
 docker rmi my-first-docker
 ```
 
-### Entrar dentro do container (shell)
+### Enter inside the container (shell)
 ```bash
 docker exec -it my-container sh
 ```
 
-## 🧹 Limpeza completa
+## 🧹 Complete cleanup
 
-Para parar e remover tudo:
+To stop and remove everything:
 
 ```bash
 docker stop my-container
@@ -94,24 +96,28 @@ docker rm my-container
 docker rmi my-first-docker
 ```
 
-Ou em um comando só:
+Or in one command:
 
 ```bash
 docker stop my-container && docker rm my-container && docker rmi my-first-docker
 ```
 
-## 📖 Conceitos Docker aprendidos
+## 📖 Docker concepts learned
 
-1. **Dockerfile** - Arquivo de instruções para criar uma imagem
-2. **Imagem** - Template imutável com a aplicação e dependências
-3. **Container** - Instância rodando de uma imagem
-4. **Port mapping** - Mapear portas do host para o container
-5. **Base image** - Usar imagem existente como base (nginx:alpine)
+1. **Dockerfile** - Instructions file to create an image
+2. **Image** - Immutable template with the application and dependencies
+3. **Container** - Running instance of an image
+4. **Port mapping** - Map ports from host to container
+5. **Base image** - Use existing image as base (nginx:alpine)
 
-## 🎯 Próximos passos
+## 🎯 Next steps
 
-- Adicionar mais páginas HTML
-- Usar Docker Compose para múltiplos serviços
-- Criar multi-stage builds
-- Adicionar variáveis de ambiente
-- Implementar health checks
+- Add more HTML pages
+- Use Docker Compose for multiple services
+- Create multi-stage builds
+- Add environment variables
+- Implement health checks
+
+---
+
+*Made with ❤️ for Docker beginners*
